@@ -1,0 +1,7 @@
+com\zwj\service\LabelService.class
+com\zwj\BaseApplication.class
+com\zwj\controller\LabelController.class
+com\zwj\entity\Label.class
+com\zwj\controller\ProjectExceptionHandler.class
+com\zwj\dao\LabelDao.class
+com\zwj\service\LabelService$1.class

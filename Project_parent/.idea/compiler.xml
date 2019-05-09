@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="project_active" />
+        <module name="project_adminzuul" />
+        <module name="project_article" />
+        <module name="project_base" />
+        <module name="project_comments" />
+        <module name="Project_common" />
+        <module name="project_config" />
+        <module name="Project_elasticsearch" />
+        <module name="Project_eureka" />
+        <module name="project_friend" />
+        <module name="project_manager" />
+        <module name="Project_preson" />
+        <module name="Project_qa" />
+        <module name="project_recruit" />
+        <module name="project_sms" />
+        <module name="project_user" />
+        <module name="project_userzuul" />
+        <module name="project_web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Prpject_manager" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

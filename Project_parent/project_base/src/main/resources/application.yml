@@ -1,0 +1,30 @@
+server:
+  port: 9001
+
+#spring:
+#  application:
+#    name: project_base
+#  datasource:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.2.128:3306/project_base?characterEncoding=utf-8
+#    username: root
+#    password: root
+
+spring:
+  application:
+    name: project-zwj
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: scott
+    password: tiger
+
+  jpa:
+    generate-ddl: true
+    show-sql: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9999/eureka
+  instance:
+    prefer-ip-address: true

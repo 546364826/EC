@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Project_parent</artifactId>
+        <groupId>com.zwj</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>Project_eureka</artifactId>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+    </dependencies>
+
+
+    <!--通过maven构建docker镜像 (刚才手工 jdk->docker；现在通过maven自动将 某个项目->docker) -->
+    <build>
+        <finalName>myEurekaProject</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.13</version>
+
+                <configuration>
+
+                    <imageName>
+                        192.168.2.128:5000/project_eureka:1.0-SNAPSHOT
+                    </imageName>
+                    <!--docker的tag为项目版本号、latest-->
+                    <baseImage>jdk1.8</baseImage>
+                    <entryPoint>["java","-jar","/${project.build.finalName}.jar"] </entryPoint>
+                    <resources>
+                        <rescource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </rescource>
+                    </resources>
+                    <dockerHost>http://192.168.2.128:2375</dockerHost>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

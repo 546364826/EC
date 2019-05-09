@@ -1,0 +1,23 @@
+server:
+  port: 9007
+
+spring:
+  application:
+    name: project-comments
+  data:
+    mongodb:
+      host: 192.168.2.128
+      database: myproject_comments
+      port: 27017
+
+
+  redis:
+    host: 192.168.2.128
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9999/eureka
+  instance:
+    prefer-ip-address: true
+

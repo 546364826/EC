@@ -1,0 +1,7 @@
+com\yq\base\controller\QuestionController.class
+com\yq\base\service\QuestionService.class
+com\yq\base\entity\Question.class
+com\yq\base\QaApplication.class
+com\yq\base\entity\QuestionLabel.class
+com\yq\base\dao\QuestionDao.class
+com\yq\base\entity\Reply.class

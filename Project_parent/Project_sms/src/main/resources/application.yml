@@ -1,0 +1,14 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: project-sms
+  rabbitmq:
+    host: 192.168.2.128
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9999/eureka
+  instance:
+    prefer-ip-address: true
